@@ -242,7 +242,7 @@ const Articles = () => {
                           component="img"
                           alt="Sample Image"
                           height="140"
-                          image={article.image_web}
+                          image={!article.image_web ? require("../assets/large.jpg") : article.image_web}
                         />
                       </Card>
                     </TableCell>

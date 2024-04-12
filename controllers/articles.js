@@ -3,7 +3,7 @@ const db = require("../models");
 
 const getArticles = async (req, res) => {
     try {
-        const art = await db.sequelize.query(`select CodeArt, LibArt, Descrip, CodeCat, prix1, image_web, visible_web from article`);
+        const art = await db.sequelize.query(`select * from article`);
 
         res.status(200).json(art[0]);
     } catch (error) {

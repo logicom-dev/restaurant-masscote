@@ -15,20 +15,21 @@ export default function Footer() {
             <h6 style={{color: "#282828"}} className="text-uppercase fw-bold mb-4">Contact</h6>
             <p style={{color: "#282828"}}>
               <MDBIcon  icon="home" className="me-4" />
-              Route kaied mhamed km 3, Sfax, Tunisie
+              Route du 14 janvier, sfax, tunisie
             </p>
             <p style={{color: "#282828"}}>
               <MDBIcon icon="envelope" className="me-3" />
-              lamascotte@edge-agency.tn
+              thedon@don.tn
             </p>
             <p style={{color: "#282828"}}>
-              <MDBIcon icon="phone" className="me-3" /> +216 52 735 777
+              <MDBIcon icon="phone" className="me-3" /> +216 56 333 333
             </p>
           </MDBCol>
           <Button       
             floating
             className="m-1"
-            href="https://www.facebook.com/La-Mascotte-362198197318317"
+            href="https://www.facebook.com/DON-CAFÉ-100076269880846"
+            target="_blank"
             style={{backgroundColor: "#E4CF59"}}
           >
             <MDBIcon style={{color: "#E9E9E9"}} fab icon="facebook-f" />
@@ -37,7 +38,8 @@ export default function Footer() {
           <Button
             floating
             className="m-1"
-            href="https://www.instagram.com/lamascotte1/?hl=fr"
+            href="https://www.instagram.com/doncafe.resto/?hl=en"
+            target="_blank"
             style={{backgroundColor: "#E4CF59"}}
           >
             <MDBIcon style={{color: "#E9E9E9"}}  fab icon="instagram" />

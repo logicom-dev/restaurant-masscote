@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import CategoriesBody from "../components/CategoriesBody"
-import logo from "../assets/MascotteLogo.png";
+import logo from "../assets/thedon.png";
 import { useScrollTrigger } from '@mui/material';
 
 export default function Categories() {
@@ -18,7 +18,7 @@ export default function Categories() {
                  justifyContent: "flex-start" ,
                  alignItems: "center" ,
                  flexDirection: "column"}}>
-            <img src={logo} alt="logo" style={{ height: "auto", width: "200px" }}/>
+            <img src={logo ? require("../assets/thedon.png") : logo} alt="logo" style={{ height: "auto", width: "200px" }}/> 
             <div style={{  width: "6rem" , height: "0.25rem" , background: "#FFEE18"}}/>
     </div>
     <CategoriesBody/>

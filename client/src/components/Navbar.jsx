@@ -9,7 +9,7 @@ export default function Navbare() {
   return (
     <Navbar style={{backgroundColor: "#E0E0E0"}} expand="lg">
       <Container>
-        <Navbar.Brand href="/">La Mascotte</Navbar.Brand>
+        <Navbar.Brand href="/">The Don</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">

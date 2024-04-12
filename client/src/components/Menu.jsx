@@ -53,14 +53,13 @@ const Menu = ({ items, loading }) => {
                   ) : (
                     <picture>
                       <source 
-                        srcSet={`${product.image_web}.webp`}
+                        src={!product.image_web ? require("../assets/large.jpg")  : product.image_web}
                         type="image/webp"
                       />
                       <img
                         border-radius="10px"
                         radius={10}
-                        src={product.image_web}
-                        srcSet={product.image_web}
+                        src={!product.image_web ? require("../assets/large.jpg")  : product.image_web}
                         loading="lazy"
                         alt=""
                       />

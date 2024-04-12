@@ -18,11 +18,12 @@ export default function Articles() {
   const [minValue2, setMinValue2] = useState(0);
   const [maxValue2, setMaxValue2] = useState(50);
   const [search, setSearch] = useState("");
-  const [displayCount, setDisplayCount] = useState(30); // Number of articles to display
+  const [displayCount, setDisplayCount] = useState(30); 
   const [isLoadingMore, setIsLoadingMore] = useState(false);
 
   const articles = useSelector((state) => state.articles);
   const dispatch = useDispatch();
+  console.log("articleszzzzz" , articles)
 
   const [model, setModel] = useState(false);
   const [detail, setDetail] = useState({});
@@ -161,12 +162,12 @@ export default function Articles() {
         ) : (
           <div className="display">
             {filteredProducts
-              .filter((product) => {
-                return (
-                  product.prix1 > parseInt(minValue2, 10) &&
-                  product.prix1 < parseInt(maxValue2, 10)
-                );
-              })
+              // .filter((product) => {
+              //   return (
+              //     product.prix1 > parseInt(minValue2, 10) &&
+              //     product.prix1 < parseInt(maxValue2, 10)
+              //   );
+              // })
               .slice(0, displayCount) // Display a limited number of articles
               .map((product, index) => (
                 <span key={index}>
@@ -197,14 +198,13 @@ export default function Articles() {
                       >
                         <picture>
                           <source
-                            srcSet={`${product.image_web}.webp`}
+                            srcSet={!product.image_web ? require("../assets/large.jpg") : product.image_web}
                             type="image/webp"
                           />
                           <img
                             border-radius="10px"
                             radius={10}
-                            src={product.image_web}
-                            srcSet={product.image_web}
+                            src={!product.image_web ? require("../assets/large.jpg") : product.image_web}
                             loading="lazy"
                             alt=""
                           />

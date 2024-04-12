@@ -216,7 +216,7 @@ const Categories = () => {
                           component="img"
                           alt="Sample Image"
                           height="140"
-                          image={categorie.Image}
+                          image={!categorie.Image ? require("../assets/large.jpg") : categorie.Image}
                         />
                       </Card>
                     </TableCell>

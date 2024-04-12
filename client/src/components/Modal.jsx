@@ -53,7 +53,7 @@ export default function Modal(props) {
                         <source srcset={props.image_web} media="(max-width: 767px)" />
                         <source srcset={props.image_web} media="(min-width: 768px) and (max-width: 1023px)" />
                         <source srcset={props.image_web} media="(min-width: 1024px)" />
-                        <img src={props.image_web} srcSet={props.image_web} loading="lazy" alt="" />
+                        <img src={!props.image_web ? require("../assets/large.jpg") : props.image_web} loading="lazy" alt="" />
                       </picture>
                     </AspectRatio>
                   </CardOverflow>

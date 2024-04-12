@@ -51,7 +51,7 @@ const CategoriesBody = () => {
               <Card onClick={() => handlerGetArticleById(cat.CodeCat)} 
                     style={{ minHeight: "222px", width: 277, margin: "5px" }}>
                 <CardCover>
-                  <img src={cat.Image} srcSet={cat.Image} loading="lazy" alt="" />
+                  <img src={!cat.Image ? require("../assets/large.jpg")  : cat.Image} loading="lazy" alt="" />
                 </CardCover>
                 <CardCover
                   sx={{

@@ -10,7 +10,7 @@ const getAuth = async (req, res) => {
       SELECT * 
       FROM employe 
       WHERE NomPrenom = ? 
-        AND MotPasse = SHA2(?, 256)`;
+        AND MotPasse = ? `;
     
     const [userData] = await db.sequelize.query(sql, {
       replacements: [NomPrenom, MotPasse],
